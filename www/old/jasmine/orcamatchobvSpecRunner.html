@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.1.0/jasmine_favicon.png">
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="/assets/js/vendor/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/jecookie.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/underscore.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/backbone.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/phonegap-1.1.0.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/code/orcautil.js"></script>
+  <script type="text/javascript" src="/assets/js/code/obv-catalog.js"></script>
+  <script type="text/javascript" src="/assets/js/code/obv-data.js"></script>
+  <script type="text/javascript" src="/assets/js/code/orcamatchobv.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.1.0/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine-1.1.0/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-1.1.0/jasmine-html.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="spec/orcamatchobvSpec.js"></script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var trivialReporter = new jasmine.TrivialReporter();
+
+      jasmineEnv.addReporter(trivialReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return trivialReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+
+  <!-- Templates -->
+
+  <script type="text/template" id="score_template">
+    Current call : <%= call %>
+  </script>
+
+  <script type="text/template" id="query_template">
+    <div class="query call">
+      <div class="image">
+        <img class="query" id="<%= id %>" src="<%= image %>">
+        <h2><%= name %></h2>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="reference_template">
+    <div class="reference">
+      <div class="call">
+        <div class="image">
+          <img class="reference" id="<%= id %>" src="<%= image %>">
+          <h2><%= name %></h2>
+        </div>
+      </div>
+      <div class="play">
+        <img src="/assets/images/buttons/play.png">
+      </div>
+    </div>
+  </script>
+
+</body>
+</html>

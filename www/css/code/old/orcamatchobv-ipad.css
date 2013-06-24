@@ -1,0 +1,264 @@
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+ height: 1024px;
+ font-family: Helvetica; 
+ font-size: 14px;
+ margin: 0;              /* Amount of negative space around the outside of the body */
+ padding: 0;             /* Amount of negative space around the inside of the body */
+ margin-left: 10px;
+ background-image:url('../../assets/images/backgrounds/background-bluelight.png');
+}
+
+#container {
+    padding-top: 50px;
+}
+
+.tile {
+	width: 219px;
+ height: 219px;
+ background: #000;
+ margin: 8px; 
+ overflow: hidden;
+ background: #88ccff;
+ float: left;
+ -webkit-border-radius: 30px 30px 30px 30px;
+ position:relative;
+}
+
+.tile .text {
+	text-align: center;
+	font-size: 30px;
+ position:relative;
+ top:45%;
+}
+
+.tile img {
+	width: 100%;
+ -webkit-border-radius: 30px 30px 30px 30px;
+
+}
+
+.matched img {
+	opacity: 0.5;
+ -webkit-border-radius: 30px 30px 30px 30px;
+}
+
+
+/**************/
+/* Flip tiles */
+/**************/
+
+.container {
+	width: 219px; height: 219px;
+}
+
+/* Make the two faces of the card lie on top of each other. */
+.face {
+	position: absolute;
+    width: 100%;
+}
+
+/* Make the transition be in 3D, otherwise the image shifts after
+each transition */
+.card {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.2s;
+}
+
+/* Display the front of the card by default */
+.front {
+	z-index: 10;
+}
+
+.flipped {
+	-webkit-transform: rotateY(180deg);				
+	z-index: 0;
+}
+
+.awesome {
+	-webkit-transform: rotateY(1080deg);				 
+	-webkit-transition: 2s; 
+}
+
+#info {
+    float: right;
+}
+#score {
+    font-size: 30px;
+    color: #cc3333;
+    font-weight: bold;
+    text-shadow: #770000 2px 2px 2px;
+}
+
+#match {
+    font-size: 30px;
+    color: #77ff77;
+    font-weight: bold;
+    text-shadow: #770000 2px 2px 2px;
+
+}
+
+img {
+ -webkit-border-radius: 30px 30px 30px 30px;
+}
+
+/* The calls */
+
+.reference { 
+    display: inline-block; 
+} 
+
+.reference .call { 
+    padding-top: 7px; 
+    padding-bottom: 3px; 
+    padding-left: 7px; 
+    padding-right: 7px; 
+    display: inline-block; 
+} 
+
+.reference img {
+    width: 150px;
+}
+
+.play img {
+    width: 50px;
+}
+
+#arrows {
+    margin: 20px;
+    margin-right: 30px;
+}
+
+#arrows img {
+    width: 70px;
+    padding: 10px;
+}
+
+/* .reference .notes { */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     margin-top: 5px; */
+/*     margin-bottom: 5px; */
+/*     background: rgba(255,255,255,0.5); */
+/*     width: 70%; */
+/*     font-weight: bold; */
+/*     font-size: 20px; */
+/*     -webkit-border-radius: 30px 30px 30px 30px; */
+/* } */
+
+/* .reference .call .image { */
+/*     background: #000; */
+/*     -webkit-border-radius: 30px 30px 30px 30px; */
+/*     width: 203px; */
+/*     height: 203px; */
+/*     -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5); */
+/* } */
+
+/* .reference .call .image img { */
+/*     margin-top: 2px; */
+/*     -webkit-border-radius: 30px 30px 30px 30px; */
+
+
+/* } */
+
+.query .call {
+    padding: 10px;
+    display: inline-block;
+}
+
+
+.query .call .image {
+    background: #000;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    width: 253px;
+    height: 253px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.query .call .image img {
+    margin-top: 2px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+
+
+}
+
+.click {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+
+.selected {
+    background: yellow;
+    -webkit-border-radius: 30px 30px 30px 30px;
+}
+
+.query img {
+    height: 250px;
+    width: 250px;
+}
+
+#game {
+    margin: 20px;
+}
+
+#query {
+    margin: auto;
+    height: 280px;
+    width: 300px;
+}
+
+#reference {
+    margin-bottom: 20px;
+}
+
+#selected {
+}
+
+.button {
+    margin: auto;
+    width : 200px;
+    height : 60px;
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#guess {
+    background: white;
+    color: black;
+    font-weight: bold;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.15);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#aaa));
+}
+
+
+.call {
+    position: relative;
+}
+
+.click h2 {
+    top: 71px;
+    left: 0px;
+}
+
+h2 {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffff77;
+    -webkit-text-stroke: 1px black;
+    display: none;
+}
+
+.button {
+    display: inline-block;
+}

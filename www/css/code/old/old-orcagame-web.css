@@ -1,0 +1,458 @@
+body {
+    font-family: Helvetica; 
+    height: 100%;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    background-image:url('../../assets/images/backgrounds/ocean_background.jpg');
+    border: 1px solid black;
+}
+
+#container {
+}
+
+#main {
+    
+}
+
+#mainPlayButton {
+    margin-top: 100px;
+}
+
+#levelListContainer {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.scoreBoardLevel {
+    width: 102px;
+    height: 128px;
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.scoreBoardLockedLevel {
+    background-image:url('../../assets/images/buttons/levelLocked.png');
+}
+
+.scoreBoardUnlockedLevel {
+    background-image:url('../../assets/images/buttons/levelUnlocked.png');
+}
+
+.scoreBoardLevel h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    -webkit-text-stroke: 1px black;
+}
+
+.scoreBoardLevelStars {
+    margin-top: 35px;
+}
+
+#scoreBoardBackButton {
+    position: absolute;
+    left: 20px;
+    top: 550px;
+}
+
+
+/* The calls */
+
+
+.reference {
+    display: inline-block;
+}
+
+.reference .call {
+    padding: 10px;
+    display: inline-block;
+}
+
+.query .call {
+    padding: 10px;
+    display: inline-block;
+}
+
+
+.query .call .image {
+    background: #000;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    width: 253px;
+    height: 253px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.query .call .image img {
+    margin-top: 2px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+
+
+
+.reference .call .image {
+    background: #000;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    width: 203px;
+    height: 203px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.reference .call .image img {
+    margin-top: 2px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+
+
+}
+
+.click {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+
+.selected {
+    background: yellow;
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+
+.query img {
+    height: 250px;
+    width: 250px;
+}
+
+.call {
+    position: relative;
+}
+
+
+.call h2 {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    font-weight: bold;
+    color: #ffff77;
+    -webkit-text-stroke: 1px black;
+}
+
+.query h2 {
+    font-size: 50px;
+    top: 100px;
+}
+
+.query .click h2 {
+    top: 91px;
+    left: 0px;
+}
+
+.reference h2 {
+    top: 80px;
+    font-size: 40px;
+    display: none;
+}
+
+.reference .click h2 {
+    top: 71px;
+    left: 0px;
+}
+
+/* The guess and next buttons */
+#guess {
+    margin-top: 10px;
+}
+
+#next {
+    margin-top: 10px;
+}
+
+#currentReferenceUndefined {
+    display: none;
+}
+
+#guessMatched {
+    display: none;
+}
+
+#guessDidntMatch1 {
+    display: none;
+}
+
+#guessDidntMatch2 {
+    display: none;
+}
+
+#guessDidntMatch3 {
+    display: none;
+}
+
+.playInfo {
+    position: absolute;
+    left: 50%;
+    margin-left: -350px;
+    top: 100px;
+    width: 500px;
+    height: 250px;
+    background: #90EE90;
+    padding: 100px;
+    -webkit-border-radius: 50px 50px 50px 50px;
+}
+
+.playInfo p {
+    font-size: 30px;
+}
+
+.button {
+    margin: auto;
+    width : 200px;
+    height : 50px;
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+    text-align: center;
+    background: white;
+    color: black;
+    font-weight: bold;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.15);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#aaa));
+}
+
+#levelComplete {
+    width: 581px;
+    height: 450px;
+    margin: auto;
+    margin-top: 100px;
+    background-image:url('../../assets/images/buttons/levelCompleteBackground.png');
+    background-repeat: no-repeat;
+}
+
+#levelCompleteScoreBoardButton {
+    position: relative;
+    top: 200px;
+    left: -70px;
+}
+
+#levelCompleteReplayLevelButton {
+    position: relative;
+    top: 200px;
+    left: 0px;
+}
+
+#levelCompleteNextLevelButton {
+    position: relative;
+    top: 200px;
+    left: 70px;
+}
+
+.reward {
+    margin: auto;
+    width: 600px;
+    height: 250px;
+    background: rgba(255,255,255,0.7);
+    border: 2px solid black;    
+}
+
+.reward p {
+    margin: 10px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.orcaImages {
+    float: right;
+    margin: 10px;
+}
+
+.orcaImages img {
+    width: 120px;
+}
+
+
+#levelCompleteLevelNumber {
+    position: relative;
+    left: -200px;
+    top: 45px;
+}
+
+.levelNumber {
+    color: white;
+
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px #8c4c1e;
+}
+
+#levelHighScore {
+    position: relative;
+    left: -50px;
+    top: 45px;
+
+    color: white;
+
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px black;
+}
+
+#levelScore {
+    position: relative;
+    left: -180px;
+    top: 200px;
+
+    color: white;
+
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #555;
+}
+
+#levelStars {
+    position: relative;
+    left: -20px;
+    top: 170px;
+
+}
+
+#pauseButton {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+
+#pauseScreen{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1025px;
+    height: 768px;
+    background: rgba(0,0,0,0.5);
+}
+
+#pauseMenu {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: -500px;
+    width: 300px;
+    height: 768px;
+    background: #338672;
+    border-right: 3px solid yellow;
+}
+
+#pauseMenuLevelNumber {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+}
+
+#pauseMenuReplayLevelButton {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+#pauseMenuScoreBoardButton {
+    position: absolute;
+    top: 450px;
+    left: 100px;
+}
+
+#pauseMenuPlayButton {
+    position: absolute;
+    top: 325px;
+    left: 255px;
+
+}
+
+#pauseMenuHelpButton {
+    position: absolute;
+    top: 620px;
+    left: 120px;
+}
+
+.helpScreen {
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.helpScreenImage {
+    margin-top: 80px;
+    margin-left: 250px;
+
+    width: 500px;
+    height: 530px;
+    border: 5px solid #fff92a;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    overflow: hidden;
+}
+
+#helpNextButton {
+    position: absolute;
+    top: 550px;
+    left: 610px;
+}
+
+#playContainer {
+    margin-top: 70px;
+}
+
+#mainContainer h1 {
+    font-size: 120px;
+    margin: auto;
+    margin-top: 120px;
+    font-weight: bold;
+    color: orange;
+    -webkit-text-stroke: 3px black;
+}
+
+#hrebInfo {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    background: rgba(255,255,255,0.8);
+    text-align: left;
+    border: 2px solid black;
+    padding: 40px;
+}
+
+#hrebInfo h2 {
+    font-size: 30px;
+}
+
+#hrebInfo h3 {
+    font-size: 20px;
+}
+
+#hrebInfo h3 {
+    font-size: 16px;
+}
+
+#scoreBoardContainer {
+    height: 1000px;
+}
+
+#helpContainer {
+    height: 1000px;
+}
+
+.helpScreen {
+    height: 1000px;
+}
+
+#playContainer {
+    height: 1000px;
+}
+
+#levelCompleteContainer {
+    height: 1000px;
+}

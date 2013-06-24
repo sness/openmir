@@ -1,0 +1,49 @@
+/**************************************/
+/*          openmir.com CSS           */
+/**************************************/
+
+
+
+
+/* Tabular lists of information */
+
+.data {
+    margin-top: 10px;
+}
+
+table { 
+	border: 1px solid #EE7728;
+}
+
+td {
+	padding: 5px;
+	border: 1px solid #F7CB75;
+}
+
+td .center {
+ text-align: center;
+}
+
+th {
+	padding: 5px;
+	border-bottom: 1px solid #EE7728;
+	border-right: 1px solid #EE7728;
+ text-align: center;
+ font-weight: bold;
+}
+
+.list th {
+	padding: 10px;
+}
+
+
+/* /trim/clip */
+
+div.ui-slider-range.ui-widget-header {
+    opacity: 0.5;
+}
+
+#trimClip {
+    width: 200px;
+    height: 200px;
+}

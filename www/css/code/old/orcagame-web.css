@@ -1,0 +1,741 @@
+body {
+    font-family: Helvetica; 
+    width: 1024px;
+    height: 768px;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    -webkit-user-select: none;
+}
+
+.screenContainer {
+    width: 1024px;
+    height: 768px;
+    padding: 0px;
+    margin: 0px;
+    background-repeat: no-repeat;
+}
+
+/* Background images for each screen */
+
+#mainContainer {
+    background-image:url('../../assets/images/backgrounds/mainScreen.png');
+}
+
+#scoreBoardContainer {
+    background-image:url('../../assets/images/backgrounds/scoreBoardScreen.png');
+}
+
+#playContainer {
+    background-image:url('../../assets/images/backgrounds/playScreen.png');
+}
+
+#levelCompleteContainer {
+    background-image:url('../../assets/images/backgrounds/levelCompleteBackground.png');
+}
+
+#achievementListContainer {
+    padding-top: 100px;
+    background-image:url('../../assets/images/backgrounds/achievementsScreen.png');
+}
+
+
+/* other containers */
+
+.queryContainer {
+    padding-top: 80px;
+}
+
+/* mainContainer assets */
+
+#mainPlayButton {
+    position: absolute;
+    width: 400px;
+    height: 135px;
+    left: 250px;
+    top: 400px;
+    background-image:url('../../assets/images/buttons/mainPlayButton.png');
+}
+
+#mainPlayButton.pressed {
+    background-image:url('../../assets/images/buttons/mainPlayButtonPressed.png');
+}
+
+#levelListContainer {
+    width: 90%;
+    margin-left: 80px;
+    padding-top: 50px;
+}
+
+.scoreBoardLevel {
+    width: 102px;
+    height: 128px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.scoreBoardLockedLevel {
+    background-image: url('../../assets/images/buttons/levelLocked.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.scoreBoardUnlockedLevel {
+    background-image:url('../../assets/images/buttons/levelUnlocked.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.scoreBoardUnlockedLevel.pressed {
+    background-image:url('../../assets/images/buttons/levelUnlockedPressed.png');
+}
+
+.scoreBoardLevel h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    -webkit-text-stroke: 1px black;
+}
+
+.scoreBoardLevel img {
+}
+
+.scoreBoardLevelStars {
+    padding-top: 7px;
+}
+
+#scoreBoardBackButton {
+    position: absolute;
+    left: 10px;
+    top: 650px;
+    width: 89px;
+    height: 89px;
+    background-image:url('../../assets/images/buttons/backButton.png');
+}
+
+#scoreBoardBackButton.pressed {
+    background-image:url('../../assets/images/buttons/backButtonPressed.png');
+}
+
+
+/* The calls */
+
+
+.reference {
+    display: inline-block;
+}
+
+.reference .call {
+    padding: 10px;
+    display: inline-block;
+}
+
+.query .call {
+    padding: 10px;
+    display: inline-block;
+}
+
+.query .call .image {
+    background: #000;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    width: 253px;
+    height: 253px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.query .call .image img {
+    margin-top: 2px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+
+
+
+.reference .call .image {
+    background: #000;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    width: 203px;
+    height: 203px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.reference .call .image img {
+    margin-top: 2px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+
+
+}
+
+.click {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+
+.selected {
+    background: yellow;
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+
+.query img {
+    height: 250px;
+    width: 250px;
+}
+
+.call {
+    position: relative;
+}
+
+
+.call h2 {
+    position: absolute;
+    left: 10px;
+    width: 90%;
+    font-weight: bold;
+    color: #ffff77;
+    -webkit-text-stroke: 1px black;
+}
+
+.query h2 {
+    font-size: 50px;
+    top: 100px;
+}
+
+.query .click h2 {
+    top: 91px;
+    left: 10px;
+}
+
+.reference h2 {
+    top: 80px;
+    font-size: 40px;
+    display: none;
+}
+
+.reference .click h2 {
+    top: 71px;
+    left: 10px;
+}
+
+/* The guess and next buttons */
+#guessButton {
+    position: absolute;
+    left: 415px;
+    top: 600px;
+    width: 200px;
+    height: 108px;
+    background-image: url('../../assets/images/buttons/selectButton.png');
+}
+
+#guessButton.pressed {
+    background-image: url('../../assets/images/buttons/selectButtonPressed.png');
+}
+
+#nextButton {
+    position: absolute;
+    left: 415px;
+    top: 600px;
+    width: 200px;
+    height: 108px;
+    background-image: url('../../assets/images/buttons/nextButton.png');
+}
+
+#nextButton.pressed {
+    background-image: url('../../assets/images/buttons/nextButtonPressed.png');
+}
+
+
+#currentReferenceUndefined {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/pickReferenceCallScreen.png');
+}
+
+#guessMatched {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/guessMatchedScreen.png');
+}
+
+#guessDidntMatch1 {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/didntMatch1.png');
+}
+
+#guessDidntMatch2 {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/didntMatch2.png');
+}
+
+#guessDidntMatch3 {
+    display: none;
+    background-image: url('../../assets/images/backgrounds/didntMatch3.png');
+}
+
+
+
+.tryAgainButton {
+    position: absolute;
+    left: 370px;
+    top: 600px;
+    width: 300px;
+    height: 105px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/buttons/tryAgainButton.png');
+}
+
+.tryAgainButton.pressed {
+    background-image: url('../../assets/images/buttons/tryAgainButtonPressed.png');
+}
+
+.guessMatchedNextButton {
+    position: absolute;
+    left: 415px;
+    top: 600px;
+    width: 300px;
+    height: 108px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/buttons/nextButton.png');
+}
+
+.guessMatchedNextButton.pressed {
+    background-image: url('../../assets/images/buttons/nextButtonPressed.png');
+}
+
+.showAnswerButton {
+    position: absolute;
+    left: 370px;
+    top: 600px;
+    width: 300px;
+    height: 105px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/buttons/showAnswerButton.png');
+}
+
+.showAnswerButton.pressed {
+    background-image: url('../../assets/images/buttons/showAnswerButtonPressed.png');
+}
+
+
+.playInfo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1024px;
+    height: 768px;
+}
+
+.button {
+    margin: auto;
+    width : 200px;
+    height : 50px;
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+    text-align: center;
+    background: white;
+    color: black;
+    font-weight: bold;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.15);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#aaa));
+}
+
+
+#levelCompleteScoreBoardButton {
+    position: absolute;
+    top: 320px;
+    left: 300px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/scoreBoard.png');
+}
+
+#levelCompleteScoreBoardButton.pressed {
+    background-image:url('../../assets/images/buttons/scoreBoardPressed.png');
+}
+
+#levelCompleteReplayLevelButton {
+    position: absolute;
+    top: 320px;
+    left: 470px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/replayLevel.png');
+}
+
+#levelCompleteReplayLevelButton.pressed {
+    background-image:url('../../assets/images/buttons/replayLevelPressed.png');
+}
+
+#levelCompleteNextLevelButton {
+    position: absolute;
+    top: 320px;
+    left: 650px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/nextLevel.png');
+}
+
+#levelCompleteNextLevelButton.pressed {
+    background-image:url('../../assets/images/buttons/nextLevelPressed.png');
+}
+
+.reward {
+    position: absolute;
+    top: 480px;
+    left: 220px;
+    width: 570px;
+    height: 250px;
+}
+
+.reward p {
+    margin: 10px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.orcaImages {
+    float: right;
+    margin: 10px;
+}
+
+.orcaImages img {
+    width: 120px;
+}
+
+
+#levelCompleteLevelNumber {
+    position: relative;
+    left: 170px;
+    top: 55px;
+}
+
+.levelNumber {
+    color: white;
+
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px #8c4c1e;
+}
+
+#levelHighScore {
+    position: relative;
+    left: -30px;
+    top: 8px;
+
+    color: white;
+
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px black;
+}
+
+#levelScore {
+    position: relative;
+    left: -30px;
+    top: 155px;
+
+    color: white;
+
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #555;
+}
+
+#levelStars {
+    position: relative;
+    left: 150px;
+    top: 95px;
+
+}
+
+#pauseButton {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/pauseButton.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#pauseButton.pressed {
+    background-image:url('../../assets/images/buttons/pauseButtonPressed.png');
+}
+
+#pauseScreen{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1025px;
+    height: 768px;
+    background: rgba(0,0,0,0.5);
+}
+
+#pauseMenu {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: -500px;
+    width: 300px;
+    height: 768px;
+    background-image:url('../../assets/images/backgrounds/pauseScreenBackground.png');
+}
+
+#pauseMenuLevelNumber {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+}
+
+#pauseMenuScoreBoardButton {
+    position: absolute;
+    top: 450px;
+    left: 100px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/scoreBoardButton.png');
+}
+
+#pauseMenuScoreBoardButton.pressed {
+    background-image:url('../../assets/images/buttons/scoreBoardButtonPressed.png');
+}
+
+#pauseMenuReplayLevelButton {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/replayLevelButton.png');
+}
+
+#pauseMenuReplayLevelButton.pressed {
+    background-image:url('../../assets/images/buttons/replayLevelButtonPressed.png');
+}
+
+#pauseMenuPlayButton {
+    position: absolute;
+    top: 325px;
+    left: 255px;
+    width: 83px;
+    height: 83px;
+    background-image:url('../../assets/images/buttons/playButton.png');
+}
+
+#pauseMenuPlayButton.pressed {
+    background-image:url('../../assets/images/buttons/playButtonPressed.png');
+}
+
+#pauseMenuHelpButton {
+    position: absolute;
+    top: 620px;
+    left: 100px;
+    width: 85px;
+    height: 85px;
+    background-image:url('../../assets/images/buttons/helpButton.png');
+}
+
+#pauseMenuHelpButton.pressed {
+    background-image:url('../../assets/images/buttons/helpButtonPressed.png');
+}
+
+.helpScreenImage {
+    padding-top: 80px;
+    padding-left: 50px;
+    width: 1024px;
+    height: 768px;
+    background-repeat: no-repeat;
+}
+
+#helpScreen0 {
+    background-image:url('../../assets/images/backgrounds/helpScreen0.png');
+}
+
+#helpScreen1 {
+    background-image:url('../../assets/images/backgrounds/helpScreen1.png');
+}
+
+#helpScreen2 {
+    background-image:url('../../assets/images/backgrounds/helpScreen2.png');
+}
+
+#helpScreen3 {
+    background-image:url('../../assets/images/backgrounds/helpScreen3.png');
+}
+
+#helpNextButton {
+    position: absolute;
+    top: 624px;
+    left: 828px;
+    width: 83px;
+    height: 83px;
+    background-image:url('../../assets/images/buttons/forwardButton.png');
+    background-repeat: no-repeat;
+}
+
+#helpNextButton.pressed {
+    background-image:url('../../assets/images/buttons/forwardButtonPressed.png');
+}
+
+
+#mainContainer h1 {
+    font-size: 120px;
+    margin: auto;
+    margin-top: 120px;
+    font-weight: bold;
+    color: orange;
+    -webkit-text-stroke: 3px black;
+}
+
+#hrebInfo {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    background: rgba(255,255,255,0.8);
+    text-align: left;
+    border: 2px solid black;
+    padding: 40px;
+}
+
+#hrebInfo h2 {
+    font-size: 30px;
+}
+
+#hrebInfo h3 {
+    font-size: 20px;
+}
+
+#hrebInfo h3 {
+    font-size: 16px;
+}
+
+
+.helpScreen {
+    height: 1000px;
+}
+
+
+#playLevelTurn {
+    position: absolute;
+    left: 900px;
+    top: 20px;
+    font-size: 50px;
+    color: white;
+}
+
+
+#achievementListBackButton {
+    position: absolute;
+    top: 650px;
+    left: 10px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/backButton.png');
+    background-repeat: no-repeat;
+}
+
+#achievementListBackButton.pressed {
+    background-image:url('../../assets/images/buttons/backButtonPressed.png');
+}
+
+.achievementContainer {
+    display: inline-block;
+}
+
+.achievement .call {
+    padding: 10px;
+}
+
+.achievement .call .image img {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+}
+
+.achievement h2 {
+    font-size: 20px;
+    top: 40px;
+}
+
+.achievement .click h2 {
+    top: 31px;
+    left: 10px;
+}
+
+.achievement.locked .image {
+    background-image: url('../../assets/images/buttons/achievementsGreyButton.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.achievementLocked {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+    background-image: url('../../assets/images/buttons/achievementsGreyButton.png');
+}
+
+.achievementLockedLevel {
+    display: inline-block;
+    width: 115px;
+    height: 110px;
+    background-image: url('../../assets/images/buttons/achievementsGreyButton.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position:center;
+}
+
+.achievementLockedLevel h2 {
+    position: relative;
+    height: 100px;
+    font-weight: bold;
+    color: #ffff77;
+    -webkit-text-stroke: 1px black;
+    font-size: 20px;
+    top: -65px;
+}
+
+
+#achievementButton {
+    position: absolute;
+    left: 10px;
+    top: 650px;
+    width: 90px;
+    height: 90px;
+    background-image:url('../../assets/images/buttons/achievementButton.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#achievementButton.pressed {
+    background-image:url('../../assets/images/buttons/achievementButtonPressed.png');
+}
+
+
+
+/* ############################## */
+
+
+#achievementUnlockedContainer {
+    position: absolute;
+    left: 770px;
+    top: 0px;
+    width: 224px;
+    height: 80px;
+    background: #f69923;
+    color: white;
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    -webkit-border-radius: 0px 0px 40px 40px;
+    display: none;
+}
