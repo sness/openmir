@@ -1,9 +1,0 @@
-convert "../webgraphics/Listen-icon.jpg" -resize 170x200 Listen-icon.jpg
-convert "../webgraphics/checkButton.png" -resize 116x117 checkButton.png
-convert "../webgraphics/helpScreen0.png" -resize 500x532 helpScreen0.png
-convert "../webgraphics/helpScreen1.png" -resize 500x522 helpScreen1.png
-convert "../webgraphics/helpScreen2.png" -resize 500x518 helpScreen2.png
-convert "../webgraphics/muteButton.png" -resize 91x88 muteButton.png
-convert "../webgraphics/nextButton.png" -resize 90x89 nextButton.png
-convert "../webgraphics/nextLevel.png" -resize 124x121 nextLevel.png
-convert "../webgraphics/playButton.png" -resize 85x83 playButton.png
